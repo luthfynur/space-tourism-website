@@ -1,4 +1,5 @@
 import TechnologyContent from '../../components/TechnologyContent';
+import { useEffect } from 'react';
 
 export default function Technology({
   height = '',
@@ -7,6 +8,10 @@ export default function Technology({
   backgroundRepeat = '',
   backgroundSize = '',
 }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div
       className={`relative ${height} ${width} ${background} ${backgroundRepeat} ${backgroundSize} `}

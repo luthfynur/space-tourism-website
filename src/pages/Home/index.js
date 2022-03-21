@@ -1,4 +1,5 @@
 import HomeContent from '../../components/HomeContent';
+import { useEffect } from 'react';
 
 export default function Home({
   height = '',
@@ -7,6 +8,10 @@ export default function Home({
   backgroundSize = '',
   backgroundRepeat = '',
 }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div
       className={`relative ${height} ${width} ${background} ${backgroundRepeat} ${backgroundSize}`}

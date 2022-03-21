@@ -1,4 +1,5 @@
 import DestinationContent from '../../components/DestinationContent';
+import { useEffect } from 'react';
 
 export default function Destination({
   height = '',
@@ -7,6 +8,10 @@ export default function Destination({
   backgroundSize = '',
   backgroundRepeat = '',
 }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div
       className={`relative ${height} ${width} ${background} ${backgroundRepeat} ${backgroundSize}`}
